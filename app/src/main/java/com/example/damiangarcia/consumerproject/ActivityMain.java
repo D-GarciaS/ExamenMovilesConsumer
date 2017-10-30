@@ -17,8 +17,10 @@ public class ActivityMain extends AppCompatActivity implements LoaderManager.Loa
 
     ListView listView;
 
-    private static final String PROVIDER_NAME = "com.example.damiangarcia.tareasettings.Provider.ProductsProvider";
-    private static final Uri CONTENT_URI = Uri.parse("content://" + PROVIDER_NAME + "/productos");
+    private static final String AUTHORITY =  "com.example.damiangarcia.tareasettings.Provider";
+    private static final String PROVIDER_NAME=  AUTHORITY + ".ProductsProvider";
+
+    private static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/productos");
 
 
     String SELECTION = "";

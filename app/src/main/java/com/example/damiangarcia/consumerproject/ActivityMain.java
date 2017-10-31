@@ -39,7 +39,7 @@ public class ActivityMain extends AppCompatActivity implements LoaderManager.Loa
     MyAdapter mCursorAdapter;
 
     String[] PROJECTION_COLIMNS = new String[]{
-            "name", "image"
+            ""
     };
 
 
@@ -53,7 +53,6 @@ public class ActivityMain extends AppCompatActivity implements LoaderManager.Loa
 
 
         mCursorAdapter = new MyAdapter(this, R.layout.product_list_item, null,FROM_COLUMNS,TO_IDS,0);
-        searchString = "%%";
 
         listView.setAdapter(mCursorAdapter);
         getLoaderManager().restartLoader(0, null, this);
